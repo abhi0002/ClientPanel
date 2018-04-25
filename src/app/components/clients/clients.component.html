@@ -1,0 +1,35 @@
+<table>
+  <tr>
+    <td><button class="btn" (click)="getTotal()">Total Number Of Clients</button></td>
+    <td>: {{totalNumber}} </td>
+  </tr>
+</table>
+<table style="border: 1px;" ng-if="clients?.length > 0;else noClients" class="table table-striped">
+  <thead class="thead-inverse">
+    <th>Key</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>email</th>
+    <th>mobile</th>
+    <th>password</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{client.$key | shorten}} </td>
+      <td>{{client.id | uppercase}}{{client._id | uppercase}}{{client.Id | uppercase}}</td>
+      <td> {{client.firstName}} {{client.lastName}}</td>
+      <td>{{client.email}}</td>
+      <td>{{client.mobile | addPlus}} {{client.phone}}</td>
+      <td> {{client.password}} </td>
+      <td>
+        <a href="#" routerLink = "/app-clients-details" class="btn btn-primary btn-sm">
+          <i class="fa fa-arrow-circle-o-right"></i> Details</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #noClients>
+  <hr>
+  <h5> There are no Clients in the system </h5>
+</ng-template>

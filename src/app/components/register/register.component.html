@@ -1,0 +1,128 @@
+
+  <div class="row">
+    <div class="col-lg-6"  style="height:755.90551181102 px; background: url(/assets/images/blue-wood--backgrounds-powerpoint.jpg); ">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="" class="btn btn-link" routerLink="/">
+            <i class="fa fa-arrow-left"></i> Back To Dashboard</a>
+        </div>
+        <div class="col-md-6"></div>
+      </div>
+      <hr style="border: none">
+
+      <div class="card" style="width:600px; float:none !important;margin: 0 auto">
+        <div class="card-header">
+          <span style="padding: 42%">Add Client</span>
+        </div>
+        <hr style="border: none">
+        <div class="card-block" style="background-color: transparent;">
+          <!-- TUTORIAL -->
+          <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <!-- <form novalidate #f="ngForm" (ngSubmit)="onSubmit(f.value)"> -->
+
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input placeholder="First Name" type="text" class="form-control" [(ngModel)]="client.firstName" name="firstName" #clientFirstName="ngModel"
+                  minlength="2" required pattern="[a-zA-Z]+">
+                <div class=" alert-danger" *ngIf="clientFirstName?.errors?.required && clientFirstName.touched">
+                  First NAme Is required.
+                </div>
+                <div class="alert-success" *ngIf="clientFirstName?.errors?.pattern ">
+                  First NAme must contain only characters .
+                </div>
+                <div class="alert-danger" *ngIf="clientFirstName?.errors?.minlength && clientFirstName.touched">
+                  First NAme must contain min 2 characters.
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <input placeholder="Last Name" type="text" class="form-control" [(ngModel)]="client.lastName" name="lastName" #clientLastName="ngModel"
+                  minlength="2" required pattern="[a-zA-Z]+">
+                <div class="alert-danger" *ngIf="clientLastName?.errors?.required && clientLastName.touched">
+                  Last NAme Is required.
+                </div>
+                <div class="alert-danger" *ngIf="clientLastName?.errors?.minlength && clientLastName.touched">
+                  Last NAme must contain min 2 characters.
+                </div>
+                <div class="alert-success" *ngIf="clientLastName?.errors?.pattern ">
+                  Last NAme must contain only characters .
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input placeholder="Email Id " type="text" class="form-control" [(ngModel)]="client.email" name="email" #clientEmail="ngModel"
+                  minlength="2" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                <div class="alert-danger" *ngIf="clientEmail?.errors?.required && clientEmail.touched">
+                  Email Id Is required.
+                </div>
+                <div class="alert-danger" *ngIf="clientEmail?.errors?.minlength && clientEmail.touched">
+                  Email must contain min 2 characters.
+                </div>
+                <div class="alert-success" *ngIf="clientEmail?.errors?.pattern ">Email format should be
+                  <small>
+                    <b>joe@abc.com</b>
+                  </small>
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <input placeholder="Phone Number" type="text" class="form-control" [(ngModel)]="client.mobile" name="phone" #clientPhone="ngModel"
+                  minlength="10" required pattern="[0-9]*">
+                <div class="alert-success" *ngIf="clientPhone?.errors?.pattern ">
+                  Mobile number must contain only numbers.
+                </div>
+                <div class="alert-danger" *ngIf="clientPhone?.errors?.minlength && clientPhone.touched">
+                  Phone Number must contain 10 digits.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <input placeholder="Id" type="text" class="form-control" [(ngModel)]="client.id" name="Id" #clientId="ngModel" required>
+                <div class="alert-danger" *ngIf="clientId?.errors?.required && clientId.touched">
+                  Id Is required.
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <input placeholder="Password" type="text" class="form-control" [(ngModel)]="client.password" name="password" #clientPassword="ngModel"
+                  minlength="6" required>
+                <div class="alert-danger" *ngIf="clientPassword?.errors?.required && clientPassword.touched">
+                  Password Is required.
+                </div>
+                <div class="alert-danger" *ngIf="clientPassword?.errors?.minlength && clientPassword.touched">
+                  Password must contain min 6 characters.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <label class="radio-inline">Male
+                <input type="radio" [(ngModel)]="client.gender" name="gender" #clientGender="ngModel" value="male" required>
+              </label>
+              <label class="radio-inline">Female
+                <input type="radio" [(ngModel)]="client.gender" name="gender" #clientGender="ngModel" value="female" required>
+              </label>
+              <!-- <mat-radio-group class="example-radio-group" name="gender" [(ngModel)]="client.gender" #clientGender="ngModel"
+                  required>
+                  <mat-radio-button  *ngFor="let option of genders" [value]="option">
+                    {{option}}
+                  </mat-radio-button>
+                </mat-radio-group> -->
+              <div class="alert-danger" *ngIf="clientGender?.errors?.required && clientGender.touched">
+                Gender Is required.
+              </div>
+            </div>
+
+
+            <div style="float: right !important;">
+              <button [disabled]="!f.valid" type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

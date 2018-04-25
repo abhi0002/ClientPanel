@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.alert p{
+    margin: 0;
+    padding: 0;
+}
+.card {
+  border: none;
+}
+.card-header{
+  border: none;
+}
+.alert-danger {
+  background-color: transparent;
+  border-color: none;
+}
+.alert-success {
+  background-color:transparent;
+  border-color: none;
+}
