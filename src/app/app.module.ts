@@ -7,8 +7,6 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSortModule } from '@angular/material/sort';
 
-
-
 // AngularFire Import
 import { AngularFireModule } from 'angularfire2';
 // import { AngularFireDatabase } from 'angularfire2/database';

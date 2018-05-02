@@ -1,0 +1,67 @@
+{
+  "client" : {
+    "0" : {
+      "email" : "harry@gmail.com",
+      "firstName" : "Milind",
+      "gender" : "male",
+      "id" : "usr1",
+      "lastName" : "patel",
+      "mobile" : 7896541455,
+      "password" : "harry123"
+    },
+    "1" : {
+      "email" : "logitech@mailinator.com",
+      "firstName" : "member",
+      "gender" : "male",
+      "id" : "usr2",
+      "lastName" : "test",
+      "mobile" : 8767898763,
+      "password" : "logitech123"
+    },
+    "2" : {
+      "_id" : "usr3",
+      "email" : "shivani@mailinator.com",
+      "firstName" : "Shivani",
+      "gender" : "male",
+      "lastName" : "das",
+      "mobile" : 7896541455,
+      "password" : "shivani123"
+    },
+    "-LAXlrrQgW2RL28QyB3y" : {
+      "Id" : "qwaw",
+      "email" : "simmi@g.com",
+      "firstName" : "Simran",
+      "gender" : "female",
+      "lastName" : "Simmi",
+      "password" : "abc@1234",
+      "phone" : "1231231231"
+    },
+    "-LAXmhect8G2aCjN_9S-" : {
+      "Id" : "user5",
+      "email" : "ruchi@g.com",
+      "firstName" : "Ruchita",
+      "gender" : "female",
+      "lastName" : "Ruchi",
+      "password" : "abc@1234",
+      "phone" : "1234567890"
+    },
+    "-LAXmqC38u49QkVcKyWg" : {
+      "Id" : "user6",
+      "email" : "binnu@g.com",
+      "firstName" : "Binamra",
+      "gender" : "male",
+      "lastName" : "binnu",
+      "password" : "Abc@1234",
+      "phone" : "1212121212"
+    },
+    "-LAXn2RA3-eYeA6UpoC5" : {
+      "Id" : "user6",
+      "email" : "lavi@g.com",
+      "firstName" : "Lavisha",
+      "gender" : "female",
+      "lastName" : "Lavi",
+      "password" : "Abc@1234",
+      "phone" : "1111111111"
+    }
+  }
+}
